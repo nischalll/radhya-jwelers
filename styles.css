@@ -19,7 +19,7 @@ body {
   text-align: center;
   margin: 0;
 }
-.ar_bg{
+.ar_bg {
   background-image: url(./images/bg/linha-divisória-png-rosa-1\ 2.png);
   height: 100px;
   background-position: center;
@@ -27,29 +27,37 @@ body {
   margin: auto;
   background-repeat: no-repeat;
 }
-.flower-bg-up{
+.flower-bg-up {
   position: absolute;
   top: 0;
   right: 0;
 }
-.flower-bg-down-container{
+.flower-bg-up.blog-page {
+  top: 115px;
+}
+.sp-flower-bg {
+  position: relative;
+  left: -10px;
+  rotate: 180deg;
+}
+.flower-bg-down-container {
   position: relative;
 }
-.flower-bg-down{
+.flower-bg-down {
   position: absolute;
   bottom: 0;
-  left:0;
+  left: 0;
   transform: rotate(180deg);
 }
-.flower-img-container{
+.flower-img-container {
   position: relative;
 }
-.flower-img-up{
+.flower-img-up {
   position: absolute;
   top: -50px;
   right: -50px;
 }
-.flower-img-down{
+.flower-img-down {
   position: absolute;
   bottom: -50px;
   left: -50px;
@@ -106,7 +114,7 @@ body {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
 }
-.block-padding-up{
+.block-padding-up {
   padding-top: 0;
 }
 /* Best value jwellery */
@@ -359,26 +367,281 @@ body {
   text-align: justified;
   padding-left: 20px;
 }
-.read-more{
+.read-more {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.read-more-btn{
+.read-more-btn {
   text-align: center;
   align-self: center;
   height: 30px;
   width: 200px;
-  border: 3px solid #B72B2B;
+  border: 3px solid #b72b2b;
   color: black;
   padding-top: 3px;
+  padding-bottom: 30px;
   position: absolute;
   bottom: 40px;
 }
+.read-more-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
-  .read-more-btn{
+  .read-more-btn.art {
     position: relative;
     bottom: 0;
   }
+}
+
+/* carousel */
+.owl-dot > span {
+  background-color: #fff !important;
+  border: 3px solid #f78383;
+  height: 24px !important;
+  width: 24px !important;
+  transition: width 0.3sec !important;
+}
+.owl-dot > span:hover {
+  background: #f78383 !important;
+}
+.owl-dot.active > span {
+  background-color: #f78383 !important;
+  width: 60px !important;
+}
+.img-carausel:hover {
+  cursor: pointer;
+}
+/* .img-carausel:hover + .img-carausel-cover {
+  display: flex !important;
+  justify-content: center;
+} */
+.img-carausel-cover {
+  z-index: 999999;
+  position: absolute;
+  width: 315px;
+  height: 220px;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* background: linear-gradient(360deg, rgba(255,176,176,1) 39%, rgba(255,242,242,1) 68%, rgba(255,255,255,1) 100%); */
+
+}
+.img-carausel-cover > a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #fff;
+}
+/* profile-page */
+.my-details {
+  padding-left: 54px;
+}
+.head > h2 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.4793807566165924px;
+  text-align: left;
+  color: #f78383;
+}
+.head > h3 {
+  font-family: Poppins;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.4514501094818115px;
+  text-align: left;
+  color: #333333;
+}
+hr {
+  color: #00000036;
+}
+.body {
+  padding-top: 10px;
+}
+.body .name {
+  display: flex;
+}
+.name {
+  flex-direction: column;
+}
+.name span {
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+.name label,
+.email label {
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.4514501094818115px;
+  text-align: left;
+}
+.name input,
+.email input {
+  padding-left: 10px;
+  height: 75px;
+  width: 257px;
+  background: #f7f7f7;
+  border: 0;
+  font-family: Poppins;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.4514501094818115px;
+  text-align: left;
+}
+.gender {
+  margin-bottom: 40px;
+}
+.gender label {
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.4514501094818115px;
+  text-align: left;
+  color: #bdbdbd;
+}
+label.gender-lbl,
+label.email-lbl {
+  color: #000;
+}
+.email {
+  margin-bottom: 40px;
+}
+.email input {
+  width: 331px;
+}
+.email a {
+  color: #2f80ed;
+  margin: 0 20px 0 20px;
+}
+/* Profile */
+.profile {
+  padding-left: 54px;
+  border-right: 4px solid #00000036;
+}
+.my-details {
+  flex-grow: 1;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 54px;
+  margin-bottom: 20px;
+}
+.card img {
+  border-radius: 50%;
+  object-fit: contain;
+  width: 186px;
+  height: 186px;
+  margin-bottom: 50px;
+}
+.account-name {
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.30370140075683594px;
+  text-align: left;
+  color: #f78383 !important;
+}
+.card div {
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.30370140075683594px;
+  text-align: left;
+  color: #000000a8;
+}
+.hello-txt{
+  margin-bottom: 20px;
+}
+#toggler:hover{
+  transition-duration: .250ms;
+  color: #2f80ed;
+}
+.links {
+  display: flex;
+  justify-content: center;
+
+  font-family: Poppins;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.4279133379459381px;
+  text-align: left;
+  color: #000000a1;
+  height: 0;
+  overflow: hidden;
+}
+.icon i {
+  color: #e77777 !important;
+  margin-right: 15px;
+  transition-duration: 300ms;
+}
+.icon i:hover{
+  color: #2f80ed !important;
+  cursor: pointer;
+}
+.toggler {
+  text-align: center;
+  color: #e77777;
+  font-size: 36px;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #00000036;
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+.head {
+  border-bottom: 4px solid #00000036;
+}
+.toggle-height{
+  height: auto;
+  transition: 500ms;
+}
+@media screen and (max-width:870px) {
+  
+}
+@media screen and (min-width: 870px) {
+  /* .name {
+    flex-direction: row;
+  } */
+  .toggler{
+    display: none;
+  }
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .links{
+    height: auto;
+  }
+  
+}
+@media screen and (min-width: 1122px) {
+  .name {
+    flex-direction: row;
+  }
+  
+  
   
 }

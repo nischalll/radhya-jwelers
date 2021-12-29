@@ -12,6 +12,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <title>Owl Carousel</title>
+    <style>
+        .img-carausel{
+            object-fit: cover;
+            height: 440px;
+            width: 440px;
+        }
+    </style>
   </head>
   <body>
     <header>
@@ -31,9 +49,12 @@
       </nav>
     </header>
     <section class="block block-padding-up">
+      <img class="flower-bg-up blog-page" src="./images/bg/depositphotos_318254452-stock-photo-a-bouquet-of-beautiful-pink 8.png"></img>
         <h1 class="greet">Blogs</h1>
+        
         <div class="ar_bg"></div>
       <div class="grid grid--1x2">
+        
         <div class="img">
           <img class="feature__image" src="./images/bg/Group 34.png" alt="" />
         </div>
@@ -45,13 +66,93 @@
             ipsum mauris faucibus vitae sed gravida. Lectus accumsan purus
             pretium posuere nunc bibendum facilisi. .
           </p>
-          <a class="read-more-btn" href="#">Read More</a>
+          <a class="read-more-btn art" href="#">Read More</a>
         </div>
       </div>
+      <!-- <img class="flower-bg-down" src="./images/bg/depositphotos_318254452-stock-photo-a-bouquet-of-beautiful-pink 8.png"></img> -->
     </section>
-    
+    <section>
+      <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-12 m-auto">
+                <div class="owl-carousel owl-theme">
+                    <div class="item mb-4">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel square" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+      
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+      
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img class="img-carausel" src="./images/bg/Rectangle 5.png" alt="" class="card-img-top">
+                            <!-- <div class="img-carausel-cover"><a class="read-more-btn" href="#">Read More</a></div> -->
+      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+  </div>
+</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"></script>
+  <script>
+      $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 15,
+          nav: true,
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: 2
+              },
+              1000: {
+                  items: 3
+              }
+          }
+      })
+  </script>
+  <div class="bg-container">
+    <img class="sp-flower-bg" src="./images/bg/depositphotos_318254452-stock-photo-a-bouquet-of-beautiful-pink 8.png"></img>
+
+  </div>
     <footer class="block block--dark footer">
-      <div class="container grid footer__sections">
+      <div class="grid footer__sections">
         <section class="collapsible collapsible--expanded footer__section">
           <header class="collapsible__header footer__heading">
             <h2 class="collapsible__heading">Information</h2>
