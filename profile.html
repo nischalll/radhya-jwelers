@@ -49,8 +49,12 @@
           /></div>
       <div class="links ">
         <div>
-          <span class="link"
-            ><span class="icon"><i class="far fa-user"></i></span><span>ACCOUNT SETTING</span>
+          <span class="link">
+          <span class="ul-toggle"><span class="icon"><i class="far fa-user"></i></span><span>ACCOUNT SETTING</span></span>
+            <ul class="ul opened">
+              <li class="active-link">Profile Information</li>
+              <li>Manage Address</li>
+            </ul>
             <hr
           /></span>
           <span class="link"
@@ -60,12 +64,7 @@
           ></span>
           <span class="link"
             ><span
-              ><span class="icon"><i class="fas fa-wallet"></i></span><span>PAYMENT</span>
-              <hr /></span
-          ></span>
-          <span class="link"
-            ><span
-              ><span class="icon"><i class="far fa-user"></i></span><span>REWARDS</span>
+              ><span class="icon"><i class="fas fa-map-pin"></i></span><span>ADDRESSES</span>
               <hr /></span
           ></span>
           <span class="link"
@@ -182,6 +181,16 @@
     toggler.addEventListener("click", function(){
       links.classList.toggle("toggle-height");
     })
+    // links->links
+    const ulToggle = document.querySelectorAll(".ul-toggle");
+    ulToggle.forEach((item)=>{
+      const itemChild = item.parentElement.children[1];
+      item.addEventListener("click", function(){
+        itemChild.classList.toggle("opened")
+      })
+      console.log(item.parentElement.children[1]);
+    })
+
   </script>
   <script
     src="https://kit.fontawesome.com/9dddb02c5f.js"
