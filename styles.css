@@ -73,13 +73,13 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 54px;
   letter-spacing: 0.03em;
   text-align: center;
   color: #d23636;
-  padding-top: 36px;
-  margin: 0;
+  padding-top: 25px;
+  margin: 0 20px;
 }
 .greeting-text {
   font: poppins;
@@ -97,6 +97,9 @@ body {
   display: grid;
 }
 @media screen and (min-width: 768px) {
+  .greet{
+    font-size: 36px;
+  }
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -283,7 +286,7 @@ body {
 .navbar-search {
   border: 0;
   border-radius: 10px;
-  height: 26px;
+  height: 20px;
   width: 250px;
   padding: 8px;
 }
@@ -458,12 +461,18 @@ div.card.border-0.shadow {
 }
 
 /* profile-page */
+.profile-header {
+  background: #ffeded;
+}
+.profile-container {
+  background: #ffeded;
+}
 .my-details {
   padding-left: 54px;
 }
 .head > h2 {
   font-family: Poppins;
-  font-size: 35px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
@@ -543,15 +552,20 @@ label.email-lbl {
   margin-bottom: 40px;
 }
 .email input {
-  width: 331px;
+  width: 268px;
 }
 .email a {
   color: #2f80ed;
   margin: 0 20px 0 20px;
 }
+@media screen and (min-width:450px){
+  .email input{
+    width: 326px;
+  }
+}
 /* Profile */
 .profile {
-  padding-left: 54px;
+  padding-left: 0px;
   border-right: 4px solid #00000036;
 }
 .my-details {
@@ -561,19 +575,20 @@ label.email-lbl {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 54px;
+  padding-right: 0px;
   margin-bottom: 20px;
 }
 .profile img {
   border-radius: 50%;
   object-fit: contain;
-  width: 186px;
-  height: 186px;
+  width: 140px; 
+  /* 186px */
+  height: 140px;
   margin-bottom: 50px;
 }
 .account-name {
   font-family: Poppins;
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: 30px;
@@ -583,7 +598,7 @@ label.email-lbl {
 }
 .card div {
   font-family: Poppins;
-  font-size: 36px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
@@ -593,17 +608,46 @@ label.email-lbl {
 }
 .hello-txt {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 74px;
+}
+/* 460 */
+.hello {
+  align-self: center;
+}
+@media screen and (min-width: 460px) {
+  .card div{
+    font-size: 36px;
+  }
+  .account-name{
+    font-size: 46px;
+  }
+  .hello-txt {
+    display: block;
+    height: auto;
+  }
+  .profile img {
+    width: 186px;
+    height: 186px;
+  }
 }
 #toggler:hover {
   transition-duration: 0.3s;
   color: #2f80ed;
 }
+.fa,
+.fas {
+ font-weight:900;
+ font-size: 25px;
+}
+
 .links {
   display: flex;
   justify-content: center;
-
   font-family: Poppins;
-  font-size: 31px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 500;
   line-height: 23px;
@@ -614,6 +658,19 @@ label.email-lbl {
   height: 0;
   transition: all 0.3s;
   overflow: hidden;
+  padding-left: 112px;
+  padding-top: 5px;
+}
+span.link{
+  cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+  .links {
+    padding-left: 0;
+  }
+  .head > h2{
+    font-size: 30px;
+  }
 }
 .link li {
   padding-left: 20px;
@@ -632,6 +689,7 @@ label.email-lbl {
   letter-spacing: -0.4279133379459381px;
   text-align: left;
 }
+
 li.active-link {
   border-left: 4px solid #2f80ed;
   font-family: Poppins;
@@ -648,6 +706,10 @@ li.active-link {
     rgba(188, 187, 187, 0.13) 52.94%,
     rgba(0, 0, 0, 0.04) 97.93%
   );
+}
+a {
+  text-decoration: none;
+  color: #000000a1;
 }
 .icon i {
   color: #e77777 !important;
@@ -678,26 +740,27 @@ li.active-link {
   height: auto;
   transition: 300ms;
 }
-ul{
+ul {
   margin: 10px 0 0 0;
 }
-.ul{
+.ul {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.ul.opened{
+.ul.opened {
   height: auto;
 
   opacity: 1;
 }
-@media screen and (max-width: 870px) {
-}
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 1000px) {
   /* .name {
     flex-direction: row;
   } */
+  .profile {
+    padding-left: 54px;
+  }
   .toggler {
     display: none;
   }
@@ -713,5 +776,460 @@ ul{
 @media screen and (min-width: 1122px) {
   .name {
     flex-direction: row;
+  }
+}
+
+/* My Order */
+.navigator a,
+.navigator {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  color: #00000063;
+  margin: 0 0 0 10px;
+  text-decoration: none;
+}
+.my-order-container {
+  padding-top: 10px;
+  background: #ffeded;
+}
+.my-order {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+/* filter */
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-left: 44px;
+  background: #f99d9d;
+  border-radius: 20px;
+  color: #fbfbfb;
+  font-family: Poppins;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.filter-heading {
+  justify-content: space-around;
+  align-self: center;
+  font-family: Poppins;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 96px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e00040;
+  cursor: pointer;
+}
+.filter-cover {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  /* height: 0;
+  opacity: 0; */
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+.show {
+  height: auto;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+.filter input {
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+/* search Bar  */
+.search-bar {
+  align-self: center;
+  display: flex;
+  height: 60px;
+  background: #fff;
+  margin-bottom: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search-field {
+  width: 215px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 20px;
+  border: 0;
+  color: #000000;
+  outline: none;
+}
+.search-btn {
+  background: #f99d9d;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.see-more {
+  display: flex;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-right: 90px;
+  margin-bottom: 40px;
+}
+.see-more span {
+  flex-grow: 1;
+}
+.see-more a {
+  color: black;
+  text-decoration: none;
+}
+/* cart */
+.cart {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+div.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jwelery-item {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 320px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 300px;
+}
+.jwelery-item img {
+  height: 100px;
+}
+.img-and-name {
+  display: flex;
+}
+.name-price {
+  margin-left: 40px;
+  margin-right: 40px;
+  align-self: center;
+}
+
+h3.name {
+  margin-top: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 54px; */
+  letter-spacing: 0em;
+  text-align: left;
+}
+span.price {
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
+/* delivery-rating */
+.date {
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+  /* line-height: 44px; */
+  letter-spacing: 0em;
+  text-align: left;
+  height: 44px;
+  left: 1525px;
+  top: 864px;
+  border-radius: nullpx;
+  margin-bottom: 0;
+}
+.dot {
+  margin-right: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #6fcf97;
+}
+.status {
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 0;
+  padding-left: 30px;
+}
+.rating {
+  padding-left: 30px;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1569e7;
+}
+@media screen and (min-width: 450px) {
+  .jwelery-item {
+    width: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .jwelery-item img {
+    height: 130px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .navigator a,
+.navigator{
+  font-size: 22px;
+}
+  .jwelery-item {
+    flex-direction: row;
+  }
+  .search-field {
+    width: 500px;
+  }
+  .jwelery-item {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .filter-cover {
+    opacity: 1;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .jwelery-item img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-cover {
+    flex-direction: column;
+    height: auto;
+  }
+  .my-order {
+    flex-direction: row;
+  }
+  .filter {
+    width: 300px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .order-status,
+  .order-time {
+    align-self: left !important;
+    margin-right: 20px;
+  }
+  .fas.fa-bars {
+    display: none;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .filter {
+    width: 350px;
+  }
+  /* .filter-heading {
+    font-size: 35px;
+  }
+  .filter input {
+    width: 20px;
+    height: 20px;
+  }
+  h3.name {
+    font-size: 20px;
+  }
+  span.price {
+    font-size: 17px;
+  }
+  h3.date {
+    font-size: 16px;
+  }
+  p.status {
+    font-size: 14px;
+  }
+  p.rating {
+    font-size: 14px;
+  } */
+}
+/* 
+.filter {
+  padding-left: 44px;
+  padding-top: 28px;
+  background: #f99d9d;
+  width: 300px;
+  height: 1000px;
+  border-radius: 20px;
+  color: #fbfbfb;
+  font-family: Poppins;
+  font-size:19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.filter-heading {
+  font-family: Poppins;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 96px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e00040;
+}
+.filter input {
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+} */
+
+/*Manage Addresses*/
+.head .manage-address h2 {
+  line-height: 30px;
+}
+.manage-addresses-container {
+  padding-top: 10px;
+  background: #ffeded;
+}
+.add-new-address {
+  border-radius: 5px;
+  margin-right: 50px;
+  background: #fff;
+  height: 137px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 20px;
+  color: #f78383;
+}
+.add-new-address h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.4279133379459381px;
+  text-align: left;
+  color: #f78383;
+  line-height: 30px;
+  padding-right: 20px;
+}
+.add-new-address i {
+  margin-right: 30px;
+}
+.address {
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 50px;
+  padding: 40px 40px 40px 40px;
+  background: #fff;
+  color: #828282;
+}
+.home {
+  border-radius: 5px;
+  display: inline;
+  padding: 5px 20px;
+  background: #e0e0e0;
+  font-family: Poppins;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.4279133379459381px;
+  text-align: center;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+span.menu {
+  padding-top: 5px;
+  font-size: 26px;
+}
+.name-number {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.4279133379459381px;
+  text-align: left;
+  color: #333333;
+}
+.user-name {
+  margin-right: 40px;
+}
+.bottom.add {
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.4279133379459381px;
+  text-align: left;
+}
+@media screen and (min-width: 540px) {
+  .name-number {
+    flex-direction: row;
+    font-size: 24px;
+  }
+  .home{
+    font-size: 27px;
   }
 }
