@@ -1235,8 +1235,44 @@ span.menu {
 }
 
 /* Women Rings Collection */
+/* .rings-collection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ring-name{
+  line-break:loose;
+}
+.img-area{
+  display: flex;
+}
+.img-area{
+  width: auto;
+} */
+/* don't mess with the code below */
+.rings-collection-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.rings-collection-mobile ul{
+  text-align: center;
+  padding: 0;
+}
+.rings-collection-mobile li {
+  list-style: none;
+  padding: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.rings-collection-mobile h2{
+  color: #f78383;
+  cursor: pointer;
+  margin-bottom: 0;
+}
 .ring div.img-area {
-  width: 210px !important;
+  width: 110px;
 }
 .img-area {
   color: #333333;
@@ -1281,7 +1317,7 @@ span.menu {
   margin: 0 50px;
   width: 150px;
 }
-.img-text a{
+.img-text a {
   width: 150px;
 }
 .img-area:hover {
@@ -1289,7 +1325,7 @@ span.menu {
 }
 .ring-name {
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -1304,12 +1340,13 @@ span.menu {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 450px;
+  display: none;
 }
 .filter-bar {
   margin-top: 50px;
   font-family: Poppins;
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 53px;
@@ -1397,11 +1434,26 @@ span.menu {
 }
 .filter-bar {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
+.no-of-results{
+  margin-left: 50px;
+  align-self:flex-start;
+}
+.collection-name{
+  margin-right: 40px;
+}
+.c-f-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  
+}
+
 div.no-of-results {
   font-family: Poppins;
-  font-size: 25px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 45px;
@@ -1414,12 +1466,13 @@ div.filter-icons {
 }
 div.filter-icons i {
   margin: 0 10px;
+  font-size: 20px;
 }
 @media screen and (min-width: 1305px) {
   .ring div.img-area {
     width: 310px !important;
   }
-  .rings-collection {
+  div.rings-collection {
     max-width: 1300px;
   }
   div.no-of-results {
@@ -1439,13 +1492,42 @@ div.filter-icons i {
     height: 49px;
     width: 270px;
   }
-  .product-info{
+  .product-info {
     width: 310px;
   }
   .img-text {
     bottom: 150px;
   }
-  .view-product{
+  .view-product {
     left: 24px;
+  }
+  .filter-bar {
+    font-size: 30px;
+  }
+  div.filter-icons i{
+    font-size: 30px;
+  }
+  div.no-of-results{
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .ring div.img-area {
+    width: 210px;
+  }
+  .rings-collection {
+    max-width: 850px;
+  }
+  .ring-name {
+    font-family: Poppins;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .rings-collection {
+    display: flex;
+  }
+  .rings-collection-mobile{
+    display: none;
   }
 }
