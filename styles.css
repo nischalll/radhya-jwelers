@@ -1317,9 +1317,6 @@ span.menu {
   margin: 0 50px;
   width: 150px;
 }
-.img-text a {
-  width: 150px;
-}
 .img-area:hover {
   color: rgb(255, 255, 255);
 }
@@ -1375,7 +1372,7 @@ span.menu {
 .view-product {
   background-color: #fff;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
@@ -1384,7 +1381,7 @@ span.menu {
   position: absolute;
   z-index: 1;
   padding: 10px 5px;
-  left: -24px;
+  left: 0px;
   bottom: 0px;
   color: #000000;
   z-index: -1;

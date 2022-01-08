@@ -36,10 +36,10 @@
     <div class="rings-collection-mobile">
       <h2>Collections</h2>
       <ul>
-        <li>Solitaire Collection</li>
-        <li>Cocktail Collection</li>
-        <li>stone ring Collection</li>
-        <li>Regular wear</li>
+        <li class="onClickColor collection-mobile">Solitaire Collection</li>
+        <li class="onClickColor collection-mobile">Cocktail Collection</li>
+        <li class="onClickColor collection-mobile">stone ring Collection</li>
+        <li class="onClickColor collection-mobile">Regular wear</li>
       </ul>
     </div>
     <div class="rings-collection">
@@ -73,7 +73,7 @@
         Showing 100 results for rings
       </div>
       <div class="c-f-container">
-        <div class="collection-name">Stone Ring Collection</div>
+        <div class="collection-name" id="collection-heading">Stone Ring Collection</div>
         <div class="filter-icons">
           <i class="fas fa-filter"></i><i class="fas fa-vector-square"></i>
           <i class="fas fa-ellipsis-v"></i>
@@ -83,7 +83,7 @@
     <div class="products">
       <div class="product">
         <div class="img-area">
-          <img src="./images/bg/Rectangle 5.png" alt="" />
+          <img src="./images/bg/Rectangle 7.png" alt="" />
           <div class="img-text">
             <a class="view-product" href="#">View Product</a>
           </div>
@@ -198,5 +198,34 @@
       src="https://kit.fontawesome.com/9dddb02c5f.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const onClickColor = document.querySelectorAll(".onClickColor");
+      onClickColor.forEach(element => {
+        element.addEventListener("click",()=>{
+          const color = element.style.color;
+          element.style.color = "#f78383";
+          setTimeout(()=>{
+            element.style.color=color;
+          },300)
+        })
+      });
+
+      const Collections = document.querySelectorAll(".ring");
+      const heading = document.getElementById("collection-heading");
+      Collections.forEach(element => {
+        element.addEventListener("click",()=>{
+          //console.log(element.children[0].children[1].innerHTML);
+          heading.innerHTML=element.children[0].children[1].innerHTML;
+        })
+      });
+
+      const collectionsMobile = document.querySelectorAll(".collection-mobile");
+      collectionsMobile.forEach(element=>{
+        element.addEventListener("click", ()=>{
+          //console.log(element.innerHTML);
+          heading.innerHTML=element.innerHTML;
+        })
+      })
+    </script>
   </body>
 </html>
