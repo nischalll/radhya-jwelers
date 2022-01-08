@@ -1256,7 +1256,7 @@ span.menu {
   align-items: center;
   margin: 0;
 }
-.rings-collection-mobile ul{
+.rings-collection-mobile ul {
   text-align: center;
   padding: 0;
 }
@@ -1266,7 +1266,7 @@ span.menu {
   cursor: pointer;
   margin-bottom: 5px;
 }
-.rings-collection-mobile h2{
+.rings-collection-mobile h2 {
   color: #f78383;
   cursor: pointer;
   margin-bottom: 0;
@@ -1434,18 +1434,18 @@ span.menu {
   flex-direction: column;
   align-items: center;
 }
-.no-of-results{
+.no-of-results {
   margin-left: 50px;
-  align-self:flex-start;
+  align-self: flex-start;
 }
-.collection-name{
+.collection-name {
   margin-right: 40px;
+  transition: all 0.3s;
 }
-.c-f-container{
+.c-f-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  
+  justify-content: space-between;
 }
 
 div.no-of-results {
@@ -1501,10 +1501,10 @@ div.filter-icons i {
   .filter-bar {
     font-size: 30px;
   }
-  div.filter-icons i{
+  div.filter-icons i {
     font-size: 30px;
   }
-  div.no-of-results{
+  div.no-of-results {
     font-size: 17px;
   }
 }
@@ -1524,7 +1524,198 @@ div.filter-icons i {
   .rings-collection {
     display: flex;
   }
-  .rings-collection-mobile{
+  .rings-collection-mobile {
     display: none;
+  }
+}
+
+/* Product */
+.product-view {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+.images {
+  padding: 30px;
+}
+.images img {
+  cursor: pointer;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  border: 1px solid #bdbdbd;
+}
+.other-images {
+  display: flex;
+  justify-content: space-around;
+}
+.static-img {
+  width: auto;
+  height: 70px;
+  border: 1px solid #bdbdbd;
+}
+.fields {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fields h1 {
+  padding-top: 0;
+  margin: 0;
+  font-family: "Playfair Display SC", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #d23636;
+}
+.active {
+  color: #fac404b2;
+}
+.product-rating {
+  color: rgba(192, 192, 192, 0.7);
+  display: flex;
+  align-items: center;
+}
+.no-of-reviews {
+  color: #fac404;
+  padding-left: 20px;
+}
+.link-product {
+  margin-left: 50px;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #f78383;
+}
+.product-form-select {
+  background: #ffffff;
+  border: 1px solid #f78383;
+  width: 300px;
+  height: 40px;
+}
+.product-form-field {
+  margin: 20px 0;
+}
+.bestseller {
+  width: fit-content;
+  padding: 5px 20px;
+  margin: 0 0 15px 0;
+  border-bottom-right-radius: 15px;
+  background-color: #f2994a;
+  color: #fff;
+}
+.price {
+  display: flex;
+  padding: 0 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+
+  color: #000000;
+}
+.cut {
+  margin-left: 40px;
+  text-decoration: line-through;
+  color: #bdbdbd;
+}
+.flat {
+  padding: 0 20px;
+  color: #f78383;
+}
+.cart-buttons {
+  margin-top: 20px;
+  padding: 0 0 0 20px;
+  display: flex;
+}
+.cart-buttons button {
+  padding: 0 20px;
+  border: none;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+}
+button.add-to-cart {
+  background: #000;
+  color: #fff;
+  margin-right: 10px;
+}
+.product-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-detail-heading {
+  margin-left: 30px;
+  margin-bottom: 0;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 75px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #d23636;
+}
+.product-desc {
+  margin-top: 0;
+  list-style: none;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.diamond-detail{
+  margin: 0 auto 40px auto;
+  max-width: 1200px;
+}
+.diamond-detail table {
+  margin: 0 auto;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style:normal;
+  font-weight: 200;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.diamond-detail th,td{
+  padding: 5px 15px;
+}
+.diamond-detail th{
+  border-bottom: 1px solid#000;
+}
+@media screen and (min-width:940px){
+  .product-view {
+    flex-direction: row;
+  }
+  .diamond-detail table{
+    font-size: 20px;
+  }
+  
+}
+@media screen and (min-width: 500px){
+  .static-img {
+    height: 100px;
+  }
+  .diamond-detail table{
+    font-size: 15px;
   }
 }
