@@ -1636,7 +1636,7 @@ div.filter-icons i {
 }
 .cart-buttons {
   margin-top: 20px;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 0;
   display: flex;
 }
 .cart-buttons button {
@@ -1690,7 +1690,7 @@ button.add-to-cart {
 .diamond-detail table {
   margin: 0 auto;
   font-family: Poppins;
-  font-size: 10px;
+  font-size: 13px;
   font-style:normal;
   font-weight: 200;
   letter-spacing: 0.03em;
